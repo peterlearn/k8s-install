@@ -1,0 +1,18 @@
+## 指定节点调度
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: myweb
+spec:
+  replicas: 7
+  template:
+    metadata:
+      labels:
+        app: myweb
+    spec:
+      nodeName: k8s-node01
+      containers:
+        - name: myweb
+          image: nginx:v1
+          ports:
+            - containerPort: 80

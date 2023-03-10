@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  # "namespace" omitted since clusterRole are not namespaced
+  name: secret-reader
+rules:
+  - apiGroups: [""]
+    resources: ["secret"]
+    verbs: ["get", "watch", "list"]

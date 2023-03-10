@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv0003
+spec:
+  capacity:
+    storage: 50Gi
+  volumeMode: FileSystem
+  accessModes:
+    - ReadWriteOnce
+  # 回收策略
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: slow   # 存储类 慢的
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /tmp
+    server: 172.17.0.2
+

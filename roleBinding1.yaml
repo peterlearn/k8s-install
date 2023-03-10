@@ -1,0 +1,14 @@
+#this Role binding allows "dave" to read secret in the development namespace.
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: read-secrets
+  namespace: development # this only grants permissions within the "development" namespace.
+subjects:
+  - kind: User
+    name: dave
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: clusterRole
+  name: secret-reader
+  apiGroup: rbac.authorization.k8s.io

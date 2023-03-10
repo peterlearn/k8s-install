@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: myweb
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: myweb
+    spec:
+      nodeSelector:
+        disk: ssd   ## 节点标签选择 key:value
+      containers:
+        - name: myweb
+          image: nginx:v1
+          ports:
+            - containerPort: 80

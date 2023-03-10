@@ -1,0 +1,32 @@
+{
+  "Base": {
+    "Start": "07/06/2022 16:04:05",
+    "End": "07/10/2022 16:04:05",
+    "IsLoop": true,
+    "Interval": 5
+  },
+  "Template": {
+    "ActivityId": 1,
+    "CountDown": 10,
+    "Title": {
+      "TemplateId": "19",
+      "TemplateArgs": [
+        {
+          "IsTemplate": true,
+          "Value": "id",
+          "Name": "gameName"
+        }
+      ]
+    },
+    "Content": {
+      "TemplateId": "19",
+      "TemplateArgs": [
+        {
+          "IsTemplate": true,
+          "Value": "id",
+          "Name": "gameName"
+        }
+      ]
+    }
+  }
+}

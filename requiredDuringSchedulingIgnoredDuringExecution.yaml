@@ -1,0 +1,21 @@
+## 硬策略调度
+## kubectl get node --show-labels
+apiVersion: v1
+kind: Pod
+metadata:
+  name: affinity  ## 亲和性
+  labels:
+    app: node-affinity-pod
+spec:
+  containers:
+    - name: with-node-affinity
+      image: nginx:v1
+  affinity: ## 亲和性
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution: ## 硬策略
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: NotIn
+                values:
+                  - k8s-node02

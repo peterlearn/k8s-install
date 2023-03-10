@@ -1,4 +1,12 @@
 ## k8s的二进制部署
+参考地址
+```
+https://blog.csdn.net/weixin_42072280/article/details/113405732
+https://blog.csdn.net/hq_bingo/article/details/125969415
+https://blog.csdn.net/qq_46902467/article/details/126660847
+https://www.cnblogs.com/fengdejiyixx/p/16576021.html
+https://www.likecs.com/ask-679205.html
+```
 
 *k8s 环境规划：*
 *Pod* *网段：* *20.0.0.0/16*
